@@ -14,16 +14,18 @@ score = 0
 
 i = 0
 while numUser:
-    i += 1
     num = random.randint(1, 10)
-    print(num)
     numUser = int(input("Введите ваше число: "))
+    if numUser == 0:
+        break
     if numUser == num:
         score += 1
-        print("Правильно! Ваш счет: ", score, "из", i)
+        print("Правильно!")
     else:
         print("Попробуйте еще раз!")
+    i += 1
 
+print("Общий счет: ", score, "из", i)
 print("До встречи!")
 
 
